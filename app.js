@@ -13,18 +13,8 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const saltRounds = 10;
 
 // Route for '/' to enable index
-app.get('/', async (req, res, next) => {
-  try {
-    const db = await dbPromise;
-    const [user, vscExt] = await Promise.all([
-      // db.all('INSERT INTO vsc_ext_table (record_id, user_id, vsc_ext_url) VALUES (3, 3, "value");'),
-      db.all('SELECT * FROM user_table'),
-      db.all('SELECT * FROM vsc_ext_table'),
-    ]);
-    res.render('index', { user, vscExt });
-  } catch (err) {
-    next(err);
-  }
+app.get('/', async (req, res) => {
+  res.sendFile(path.join(__dirname + '/newlogin.html'));
 });
 
 // Route for registration form
