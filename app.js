@@ -21,7 +21,6 @@ app.get('/', async (req, res, next) => {
       db.all('SELECT * FROM user_table'),
       db.all('SELECT * FROM vsc_ext_table'),
     ]);
-    console.log('test', user, vscExt);
     res.render('index', { user, vscExt });
   } catch (err) {
     next(err);
@@ -75,8 +74,8 @@ app.post('/register.html', urlencodedParser, async (req, res, next) => {
     await Promise.all(db.all(`INSERT INTO user_table (first_name, last_name, email, hash_pass) VALUES ('${firstName}', '${lastName}', '${email}', '${hashPass}');`));
     let user = await Promise.all(db.all(`SELECT * FROM user_table WHERE email='${email}';`));
     user = user[0]
-    console.log(user);
-    res.render('extList', { user });
+    const extArray = await Promise.all(db.all(`SELECT * FROM vsc_ext_table WHERE user_id="${user.user_id}"`));
+    res.render('extList', { user, extArray });
   } catch (err) {
     next(err);
   }
@@ -96,6 +95,18 @@ app.post('/addExt.html', urlencodedParser, async (req, res, next) => {
     let user = await Promise.all(db.all(`SELECT * FROM user_table WHERE user_id='${userID}';`));
     user = user[0];
     res.render('extList', { user, extArray });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// Route to see most popular VS Code Extensions
+app.get('/popular.html', async (req, res) => {
+  try {
+    const db = await dbPromise;
+    // Insert new extension into extention table
+    const extArray = await Promise.all(db.all(`SELECT COUNT(record_id), vsc_ext_name, vsc_ext_url FROM vsc_ext_table GROUP BY vsc_ext_name ORDER BY 1 DESC;`));
+    res.render('popular', { extArray });
   } catch (err) {
     next(err);
   }
