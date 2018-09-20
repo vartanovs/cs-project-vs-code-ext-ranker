@@ -51,7 +51,7 @@ app.post('/login.html', urlencodedParser, async (req, res, next) => {
         res.render('extList', { user, extArray });
       }
     });
-    // res.render('index', { userArray });
+    res.sendFile(path.join(__dirname + '/newlogin.html'));
   } catch (err) {
     next(err);
   }
