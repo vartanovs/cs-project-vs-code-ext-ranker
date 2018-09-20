@@ -50,3 +50,31 @@ body {
     font-family: 'Poor Story', cursive;
     font-size: 2em;
 }
+
+.register {
+    border: none;,
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button {
+    text-align: center;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    width: 50px;
+    text-decoration: none;
+    color: initial;
+    /* border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px 7px 2px;
+    font-style: none;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+     */
+}
