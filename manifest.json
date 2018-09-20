@@ -1,0 +1,20 @@
+{
+  "manifest-version": 2,
+  "name": "VS Code Extension Ranker",
+  "description": "Instant visibility into which Visual Studio Code Extensions are most popular.",
+  "icons": {
+    "128": "vs-code-red.png"
+  },
+  "version": "1.0.0",
+  "browser-action": {
+    "default_icon": "vs-code-red.png",
+    "default_title": "VS Code Ext Ranker",
+    "default_popup": "popup.html"
+  },
+
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+
+  "permissions": ["activeTab"]
+}
