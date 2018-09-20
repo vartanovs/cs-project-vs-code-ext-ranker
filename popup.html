@@ -23,12 +23,14 @@
     <div class="form">
         <form action="http://localhost:3000/login.html" method="POST" target="_blank">
             Email:<br>
-            <input id="account" name="account" type="text">
+            <input autofocus class="input-box" id="account" name="account" type="text">
             <br>
             Password:<br>
-            <input id="pass" name="pass" type="password">
-            <input type="submit" value="Login">
-            <a href="form.html"  target="_blank" class="button">Register</a>
+            <input class="input-box" id="pass" name="pass" type="password">
+            <div class="button-container">
+                <input class="button" type="submit" value="Login">
+                <a class="button" href="form.html"  target="_blank" >Register</a>
+            </div>
         </form>
     </div>
 

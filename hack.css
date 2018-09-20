@@ -77,114 +77,36 @@ body {
     font-size: 2em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* #FormDiv {
-
-        margin:10px auto;
-        max-width: 400px;
-        padding: 20px 12px 10px 20px;
-        font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+.input-box {
+    border: 1px solid darkslategrey;
+    border-radius: 2px;
+    margin-top: 2px;
+    margin-bottom: 4px;
 }
 
-
-#FormDiv {
-    padding: 0;
-    display: block;
-    list-style: none;
-    margin: 10px 0 0 0;
-}
-#FormDiv{
-    margin:0 0 3px 0;
-    padding:0px;
-    display:block;
-    font-weight: bold;
+.input-box:focus {
+    outline: none;
 }
 
-#FormDiv input[type=text], 
-#FormDiv input[type=date],
-#FormDiv input[type=datetime],
-#FormDiv input[type=number],
-#FormDiv input[type=search],
-#FormDiv input[type=time],
-#FormDiv input[type=url],
-#FormDiv input[type=email],
-textarea, 
-
-select{
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border:1px solid #BEBEBE;
-    padding: 7px;
-    margin:0px;
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;  
-}
-
-
-
-#FormDiv .field-long{
-    width: 100%;
-}
-#FormDiv .field-select{
-    width: 100%;
-}
-#FormDiv .field-textarea{
-    height: 100px;
-}
-#FormDiv input[type=submit], #FormDiv input[type=button]{
-    background: #4B99AD;
-    padding: 8px 15px 8px 15px;
+.button {
+    background: rgb(158, 30, 30);
     border: none;
-    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: white;
+    height: 20px;
+    line-height: 20px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 60px;
 }
-#FormDiv input[type=submit]:hover, #FormDiv input[type=button]:hover{
-    background: #4691A4;
-    box-shadow:none;
-    -moz-box-shadow:none;
-    -webkit-box-shadow:none;
+
+.button:hover {
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
-#FormDiv .required{
-    color:red;
-}
-
-
-
-
-
-
-
-</style> */
