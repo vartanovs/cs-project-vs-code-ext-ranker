@@ -57,6 +57,11 @@ app.post('/login.html', urlencodedParser, async (req, res, next) => {
   }
 });
 
+// Route for new login css file
+app.get('/newlogin.css', (req, res) => {
+  res.sendFile(path.join(__dirname + '/newlogin.css'));
+});
+
 // Route for login.html to confirm login success
 app.post('/register.html', urlencodedParser, async (req, res, next) => {
   // Cache all inputs
@@ -77,6 +82,8 @@ app.post('/register.html', urlencodedParser, async (req, res, next) => {
     next(err);
   }
 });
+
+// Route for adding a new Extension
 
 app.listen(3000, () => {
   console.log('Server Started on Port 3000');
