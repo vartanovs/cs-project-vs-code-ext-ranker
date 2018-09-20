@@ -1,4 +1,5 @@
 <style>
+<<<<<<< HEAD
 
   a {
     color: blue;
@@ -14,13 +15,67 @@
     cursor: pointer;
   }
   
-</style>
+  .vscr {
+    display: flex;
+    justify-content: center;
+    font-family: 'Poor Story', cursive;
+  }
 
-<h1>Visual Studio Code Ranking</h1>
+  .firstV {
+    color: rgb(158, 30, 30);
+    /* text-shadow: 2px 2px; */
+  }
+
+  .firstC {
+    color: rgb(158, 30, 30);
+      /* text-shadow: 2px 2px; */
+    }
+
+  .firstS {
+    color: rgb(158, 30, 30);
+      /* text-shadow: 2px 2px; */
+    }
+
+  .firstR {
+    color: rgb(158, 30, 30);
+      /* text-shadow: 2px 2px; */
+    }
+
+  .firstY {
+    color: rgb(158, 30, 30)
+  }
+
+  .firstE {
+    color: rgb(158, 30, 30)
+  }
+
+  .userStyle {
+    color: rgb(158, 30, 30)
+  }
+
+  .userName {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: 'Poor Story', cursive;
+  }
+
+  .ext {
+    font-family: 'Poor Story', cursive;
+  }
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+<div>
+<div class="vscr">
+  <h1><strong class="firstV">V</strong>isual <strong class="firstS">S</strong>tudio <strong class="firstC">C</strong>ode <strong class="firstR">R</strong>anking</h1>
+</div>
 <br>
+<div class="userName">
 <h2>
-  User: <%= user.first_name %> <%= user.last_name %>
+  <strong class="userStyle">User</strong>: <%= user.first_name %> <%= user.last_name %>
 </h2>
+</div>
 <hr>
 <form action="addExt.html" method="POST">
   <input name="userID" id="userID" value='<%= user.user_id %>' type="hidden"/>
@@ -29,12 +84,12 @@
   <input type="submit" value="submit"/>
 </form>
 <hr>
-<h2>Your Extensions</h2> 
-<ul>
+<h2 class="ext"><strong class="firstY">Y</strong>our <strong class="firstE">E</strong>xtensions</h2> 
+<ol>  
   <% extArray.forEach((extension) => { %>
     <li><strong><%= extension.vsc_ext_name %></strong> - <a href="<%= extension.vsc_ext_url %>" target="_blank"><%= extension.vsc_ext_url %></a></li>
   <% }); %>
-</ul>
+</ol>
 <hr>
 <a href="popular.html">See Most Popular Extensions</a>
 

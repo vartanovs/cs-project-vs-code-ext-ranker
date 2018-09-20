@@ -2,6 +2,11 @@ body {
     font-family: 'Poor Story', cursive;
 }
 
+nameURL {
+    display: flex;
+    justify-content: center;
+}
+
 
 .modal-content {
     padding: 0 22px;
@@ -90,4 +95,9 @@ body {
 
 .button:hover {
     box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+
+.userName {
+    display: flex;
+    justify-content: center;
 }
