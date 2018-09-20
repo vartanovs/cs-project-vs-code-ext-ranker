@@ -1,3 +1,21 @@
+<style>
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+strong {
+  color: darkred;
+  text-decoration: underline;
+}
+
+strong:hover {
+  cursor: pointer;
+}
+
+</style>
+
 <h1>Visual Studio Code Ranking</h1>
 <h2>Most Popular Visual Studio Code Extensions</h2>
 
@@ -20,7 +38,6 @@
   let extList = document.getElementsByTagName('li');
   for (let i = 0; i < extList.length; i += 1) {
     extList[i].childNodes[1].addEventListener('click', () => {
-      console.log(extList[i].childNodes[1]);
       var $form = $('<form action="extUsers.html" method="POST">');
       $form.append(`<input name="extName" value="${extList[i].childNodes[1].textContent}" />`);
       $form.append(`<input name="extURL" value="${extList[i].childNodes[3].textContent}" />`);

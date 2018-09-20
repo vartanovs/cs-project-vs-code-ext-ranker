@@ -1,15 +1,15 @@
 <h1>Visual Studio Code Ranking</h1>
 <br>
 <h2>
-  Extension Name: <%= extName %> <!-- TODO -->
+  Extension Name: <%= extName %>
 </h2>
-<h3>
-  Extension URL: <%= extURL %> <!-- TODO -->
-</h3>
+<p>
+  <strong>Extension URL:</strong> <a href="<%= extURL %>" target="_blank"><%= extURL %></a>
+</p>
 <hr>
-<h2>All <%= extName %> Users</h2> <!-- TODO -->
+<h2>All <%= extName %> Users</h2>
 <ul>
   <% userArray.forEach((user) => { %><!-- TODO -->
-    <li><%= user.first_name %> <%= user.last_name %></li>
+    <li><%= user[0].first_name %> <%= user[0].last_name %></li>
   <% }); %>
 </ul>

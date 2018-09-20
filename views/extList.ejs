@@ -1,3 +1,21 @@
+<style>
+
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  strong {
+    color: darkred;
+    text-decoration: underline;
+  }
+  
+  strong:hover {
+    cursor: pointer;
+  }
+  
+</style>
+
 <h1>Visual Studio Code Ranking</h1>
 <br>
 <h2>
@@ -19,3 +37,16 @@
 </ul>
 <hr>
 <a href="popular.html">See Most Popular Extensions</a>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  let extList = document.getElementsByTagName('li');
+  for (let i = 0; i < extList.length; i += 1) {
+    extList[i].childNodes[0].addEventListener('click', () => {
+      var $newForm = $('<form action="extUsers.html" method="POST">');
+      $newForm.append(`<input name="extName" value="${extList[i].childNodes[0].textContent}" />`);
+      $newForm.append(`<input name="extURL" value="${extList[i].childNodes[2].textContent}" />`);
+      $newForm.appendTo($('body')).submit();
+    })
+  };
+</script>
