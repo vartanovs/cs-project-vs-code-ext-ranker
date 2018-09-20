@@ -1,5 +1,5 @@
 {
-  "manifest-version": 2,
+  "manifest_version": 2,
   "name": "VS Code Extension Ranker",
   "description": "Instant visibility into which Visual Studio Code Extensions are most popular.",
   "icons": {
