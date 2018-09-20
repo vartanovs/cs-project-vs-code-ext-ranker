@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Instant visibility into which Visual Studio Code Extensions are most popular.",
   "main": "app.js",
+  "engines": {
+    "node": "10.9.0"
+  },
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
