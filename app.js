@@ -47,7 +47,6 @@ app.post('/login.html', urlencodedParser, async (req, res, next) => {
       if (user.email === logInAcct && bcrypt.compareSync(logInPass, user.hash_pass)) {
         // If combination found, pull extension list
         const extArray = await Promise.all(db.all(`SELECT * FROM vsc_ext_table WHERE user_id="${user.user_id}"`));
-        console.log(extArray);
         res.render('extList', { user, extArray });
       }
     });
@@ -64,7 +63,7 @@ app.get('/newlogin.css', (req, res) => {
 
 // Route for login.html to confirm login success
 app.post('/register.html', urlencodedParser, async (req, res, next) => {
-  // Cache all inputs
+  // Cache registration inputs
   const firstName = req.body.firstname;
   const lastName = req.body.lastname;
   const email = req.body.email;
@@ -84,6 +83,23 @@ app.post('/register.html', urlencodedParser, async (req, res, next) => {
 });
 
 // Route for adding a new Extension
+app.post('/addExt.html', urlencodedParser, async (req, res, next) => {
+  // Cache extension inputs
+  const userID = req.body.userID;
+  const extName = req.body.extName;
+  const extURL = req.body.extURL;
+  try {
+    const db = await dbPromise;
+    // Insert new extension into extention table
+    await Promise.all(db.all(`INSERT INTO vsc_ext_table (user_id, vsc_ext_name, vsc_ext_url) VALUES ('${userID}', '${extName}', '${extURL}');`));
+    const extArray = await Promise.all(db.all(`SELECT * FROM vsc_ext_table WHERE user_id="${userID}"`));
+    let user = await Promise.all(db.all(`SELECT * FROM user_table WHERE user_id='${userID}';`));
+    user = user[0];
+    res.render('extList', { user, extArray });
+  } catch (err) {
+    next(err);
+  }
+});
 
 app.listen(3000, () => {
   console.log('Server Started on Port 3000');

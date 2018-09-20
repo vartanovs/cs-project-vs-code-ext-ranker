@@ -5,6 +5,7 @@
 </h2>
 <hr>
 <form action="addExt.html" method="POST">
+  <input name="userID" id="userID" value='<%= user.user_id %>' type="hidden"/>
   <input id="extName" name="extName" placeholder="Extension Name" type="text"/>
   <input id="extURL" name="extURL" placeholder="Extension URL" type="text"/>
   <input type="submit" value="submit"/>
