@@ -1,6 +1,18 @@
-<h1>EXT List</h1>
+<h1>Visual Studio Code Ranking</h1>
 <br>
-
 <h2>
-  <%= user.first_name %> <%= user.last_name %>
+  User: <%= user.first_name %> <%= user.last_name %>
 </h2>
+<hr>
+<form action="addExt.html" method="POST">
+  <input id="extName" name="extName" placeholder="Extension Name" type="text"/>
+  <input id="extURL" name="extURL" placeholder="Extension URL" type="text"/>
+  <input type="submit" value="submit"/>
+</form>
+<hr>
+<h2>Your Extensions</h2> 
+<ul>
+  <% extArray.forEach((extension) => { %>
+    <li><strong><%= extension.vsc_ext_name %></strong> - <%= extension.vsc_ext_url %></li>
+  <% }); %>
+</ul>

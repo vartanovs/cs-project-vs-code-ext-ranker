@@ -43,13 +43,15 @@ app.post('/login.html', urlencodedParser, async (req, res, next) => {
     // Query all user accounts from database, cache in userArray
     const userArray = await Promise.all(db.all('SELECT * FROM user_table'));
     // Loop through accounts to confirm if user/pass combination is available
-    userArray.forEach((user) => {
+    userArray.forEach(async (user) => {
       if (user.email === logInAcct && bcrypt.compareSync(logInPass, user.hash_pass)) {
-        // If combination found, render extList page
-        res.render('extList', { user });
+        // If combination found, pull extension list
+        const extArray = await Promise.all(db.all(`SELECT * FROM vsc_ext_table WHERE user_id="${user.user_id}"`));
+        console.log(extArray);
+        res.render('extList', { user, extArray });
       }
     });
-    res.render('index', { userArray });
+    // res.render('index', { userArray });
   } catch (err) {
     next(err);
   }
