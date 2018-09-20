@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 30%;
+    padding: 13% 0 4% 0;
+    
+}
+
+.signIn {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #FormDiv {
+
+        margin:10px auto;
+        max-width: 400px;
+        padding: 20px 12px 10px 20px;
+        font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+#FormDiv {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+#FormDiv{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+}
+
+#FormDiv input[type=text], 
+#FormDiv input[type=date],
+#FormDiv input[type=datetime],
+#FormDiv input[type=number],
+#FormDiv input[type=search],
+#FormDiv input[type=time],
+#FormDiv input[type=url],
+#FormDiv input[type=email],
+textarea, 
+
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;  
+}
+
+
+
+#FormDiv .field-long{
+    width: 100%;
+}
+#FormDiv .field-select{
+    width: 100%;
+}
+#FormDiv .field-textarea{
+    height: 100px;
+}
+#FormDiv input[type=submit], #FormDiv input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+#FormDiv input[type=submit]:hover, #FormDiv input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+#FormDiv .required{
+    color:red;
+}
+
+
+
+
+
+
+
+</style> */
