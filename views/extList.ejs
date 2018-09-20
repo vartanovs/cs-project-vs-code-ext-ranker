@@ -1,5 +1,4 @@
 <style>
-<<<<<<< HEAD
 
   a {
     color: blue;
@@ -64,6 +63,53 @@
     font-family: 'Poor Story', cursive;
   }
 
+  #extName {
+    border: 1px solid darkslategrey;
+    border-radius: 2px;
+    height: 24px;
+    padding: 3px;
+    width: 200px;
+  }
+
+  #extURL {
+    border: 1px solid darkslategrey;
+    border-radius: 2px;
+    height: 24px;
+    padding: 3px;
+    width: 200px;
+  }
+
+  #extName:focus {
+    outline: none;
+  }
+
+  #extURL:focus {
+    outline: none;
+  }
+
+  #button {
+    background: rgb(158, 30, 30);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: white;
+    height: 20px;
+    line-height: 20px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    width: 60px;
+}
+
+#button:hover {
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+
 </style>
 <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
 <div>
@@ -79,9 +125,9 @@
 <hr>
 <form action="addExt.html" method="POST">
   <input name="userID" id="userID" value='<%= user.user_id %>' type="hidden"/>
-  <input id="extName" name="extName" placeholder="Extension Name" type="text"/>
+  <input autofocus id="extName" name="extName" placeholder="Extension Name" type="text"/>
   <input id="extURL" name="extURL" placeholder="Extension URL" type="text"/>
-  <input type="submit" value="submit"/>
+  <input id="button" type="submit" value="submit"/>
 </form>
 <hr>
 <h2 class="ext"><strong class="firstY">Y</strong>our <strong class="firstE">E</strong>xtensions</h2> 
