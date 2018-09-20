@@ -11,6 +11,20 @@
         user
       <% } %>
       
-      - <strong><%= extension.vsc_ext_name %></strong> - <%= extension.vsc_ext_url %></li>
+      - <strong><%= extension.vsc_ext_name %></strong> - <a href="<%= extension.vsc_ext_url %>" target="_blank"><%= extension.vsc_ext_url %></a></li>
   <% }); %>
 </ul>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  let extList = document.getElementsByTagName('li');
+  for (let i = 0; i < extList.length; i += 1) {
+    extList[i].childNodes[1].addEventListener('click', () => {
+      console.log(extList[i].childNodes[1]);
+      var $form = $('<form action="extUsers.html" method="POST">');
+      $form.append(`<input name="extName" value="${extList[i].childNodes[1].textContent}" />`);
+      $form.append(`<input name="extURL" value="${extList[i].childNodes[3].textContent}" />`);
+      $form.appendTo($('body')).submit();
+    })
+  };
+</script>

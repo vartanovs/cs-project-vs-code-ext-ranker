@@ -112,6 +112,26 @@ app.get('/popular.html', async (req, res) => {
   }
 });
 
+// Route to see which users use a VS Code Extension
+app.post('/extUsers.html', urlencodedParser, async (req, res, next) => {
+  // Cache incoming extension name
+  const extName = req.body.extName;
+  const extURL = req.body.extURL;
+
+  try {
+    const db = await dbPromise;
+    // Insert new extension into extention table
+    const userIDArray = await Promise.all(db.all(`SELECT user_id FROM vsc_ext_table WHERE vsc_ext_name="${extName}"`));
+    const userArray = [];
+    userIDArray.forEach(async (userID) => {
+      userArray.push(await Promise.all(db.all(`SELECT first_name, last_name FROM user_table WHERE user_id="${userID}"`)));
+    });
+    res.render('extUsers', { extName, extURL, userArray });
+  } catch (err) {
+    next(err);
+  }
+});
+
 app.listen(3000, () => {
   console.log('Server Started on Port 3000');
 });

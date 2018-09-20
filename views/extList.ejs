@@ -14,7 +14,7 @@
 <h2>Your Extensions</h2> 
 <ul>
   <% extArray.forEach((extension) => { %>
-    <li><strong><%= extension.vsc_ext_name %></strong> - <%= extension.vsc_ext_url %></li>
+    <li><strong><%= extension.vsc_ext_name %></strong> - <a href="<%= extension.vsc_ext_url %>" target="_blank"><%= extension.vsc_ext_url %></a></li>
   <% }); %>
 </ul>
 <hr>
