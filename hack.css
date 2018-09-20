@@ -1,15 +1,80 @@
+body {
+    font-family: 'Poor Story', cursive;
+}
+
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: auto;
     width: 30%;
-    padding: 13% 0 4% 0;
-    
+    padding: 10% 0 0 0;
+    text-shadow: 3px 3px 17px #000000;
 }
 
 .signIn {
     display: flex;
     justify-content: center;
+}
+
+.vs-image {
+    display: flex;
+    justify-content: center;
+    padding: 10% 0 5% 0;
+}
+
+body {
+    font-family: 'Poor Story', cursive;
+}
+
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    padding: 0 22px;
+    border-bottom: 1px solid #e1ddd8;
+}
+
+.logo-icon {
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    padding-left: 5%;
+    padding-top: 15%;
+}
+
+.modal-header {
+    align-items: center;
+    padding-left: 5%;
+}
+
+.firstV {
+    color: rgb(158, 30, 30);
+    /* text-shadow: 2px 2px; */
+}
+
+.firstC {
+    color: rgb(158, 30, 30);
+    /* text-shadow: 2px 2px; */
+}
+
+.firstE {
+    color: rgb(158, 30, 30);
+    /* text-shadow: 2px 2px; */
+}
+
+.firstR {
+    color: rgb(158, 30, 30);
+    /* text-shadow: 2px 2px; */
+}
+
+.visualCodeMain {
+    font-family: 'Poor Story', cursive;
+    font-size: 2em;
 }
 
 
